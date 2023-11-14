@@ -1,0 +1,40 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:com:appian:types:AB" targetNamespace="urn:com:appian:types:AB">
+  <xsd:complexType name="AB_APP_MODULES_VISIBILITY">
+    <xsd:annotation>
+      <xsd:appinfo source="appian.jpa">@Table(name="ab_app_modules_visibility")</xsd:appinfo>
+      <xsd:documentation><![CDATA[Data type to map table : AB_APP_MODULES_VISIBILITY]]></xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="modVisId" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Id @GeneratedValue @Column(name="MOD_VIS_ID", nullable=false, unique=true, columnDefinition="INT")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="moduleCode" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="MODULE_CD", nullable=false, columnDefinition="VARCHAR(50)") @JoinColumn(name="MODULE_CD")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="roleCode" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="ROLE_CD", nullable=false, columnDefinition="VARCHAR(50)") @JoinColumn(name="ROLE_CD")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="lobCode" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="LOB_CD", nullable=false, columnDefinition="VARCHAR(50)") @JoinColumn(name="LOB_CD")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="teamCode" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="TEAM_CD", nullable=false, columnDefinition="VARCHAR(50)") @JoinColumn(name="TEAM_CD")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="isActive" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="IS_ACTIVE", columnDefinition="VARCHAR(3)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
